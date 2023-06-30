@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply select-none;
+  }
+  /* html {
+    font-family: IRANSans, system-ui, sans-serif;
+  } */
+}
+
+.app {
+  @apply flex justify-center items-center min-h-screen;
+}
+
+.world {
+  @apply w-full h-[200px] overflow-hidden relative;
+}
+
+.score {
+  @apply absolute text-[3vmin] right-[1vmin] top-[1vmin];
+}
+
+.start-screen {
+  @apply absolute text-[5vmin] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.hide {
+  @apply hidden;
+}
+
+.ground {
+  --left: 0;
+  @apply absolute w-[300%] bottom-0 left-[calc(var(--left)_*_1%)];
+}
+
+.dinosaur {
+  --bottom: 0;
+  @apply absolute left-[1%] h-[30%] bottom-[calc(var(--bottom)_*_1%)];
+}
+
+.cactus {
+  @apply absolute bottom-0 h-[30%] left-[calc(var(--left)_*_1%)];
+}
